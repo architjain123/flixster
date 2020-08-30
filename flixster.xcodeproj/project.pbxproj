@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,13 +11,13 @@
 		AEB5B2E9A11D53C5AA5AC2A8 /* Pods_flixster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989C0CF0F2F477AA5393769D /* Pods_flixster.framework */; };
 		CBCAB1FF6FD32F61155A594E /* Pods_flixsterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE12480FB6501969E616923 /* Pods_flixsterTests.framework */; };
 		E48D8B6024FB825300997A03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48D8B5F24FB825300997A03 /* AppDelegate.swift */; };
-		E48D8B6224FB825300997A03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48D8B6124FB825300997A03 /* SceneDelegate.swift */; };
 		E48D8B6724FB825300997A03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48D8B6524FB825300997A03 /* Main.storyboard */; };
 		E48D8B6924FB825500997A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48D8B6824FB825500997A03 /* Assets.xcassets */; };
 		E48D8B6C24FB825500997A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48D8B6A24FB825500997A03 /* LaunchScreen.storyboard */; };
 		E48D8B7724FB825500997A03 /* flixsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48D8B7624FB825500997A03 /* flixsterTests.swift */; };
 		E48D8B8224FB825500997A03 /* flixsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48D8B8124FB825500997A03 /* flixsterUITests.swift */; };
 		E48D8B9024FB853600997A03 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48D8B8F24FB853600997A03 /* MoviesViewController.swift */; };
+		E4A7A79D24FC047A00C40E76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7A79C24FC047A00C40E76 /* SceneDelegate.swift */; };
 		E4B45EFB24FBB0070028061E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B45EFA24FBB0070028061E /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,6 @@
 		DC5177C19371CE96C4D1DD6E /* Pods_flixster_flixsterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flixster_flixsterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48D8B5C24FB825300997A03 /* flixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48D8B5F24FB825300997A03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E48D8B6124FB825300997A03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E48D8B6624FB825300997A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E48D8B6824FB825500997A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E48D8B6B24FB825500997A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		E48D8B8124FB825500997A03 /* flixsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flixsterUITests.swift; sourceTree = "<group>"; };
 		E48D8B8324FB825500997A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E48D8B8F24FB853600997A03 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		E4A7A79C24FC047A00C40E76 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E4B45EFA24FBB0070028061E /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +113,6 @@
 				489AC7C1F07EF6ACA18302AD /* Pods-flixsterTests.debug.xcconfig */,
 				18AEE2380D5B4B2FB509857D /* Pods-flixsterTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,8 +141,8 @@
 		E48D8B5E24FB825300997A03 /* flixster */ = {
 			isa = PBXGroup;
 			children = (
+				E4A7A79C24FC047A00C40E76 /* SceneDelegate.swift */,
 				E48D8B5F24FB825300997A03 /* AppDelegate.swift */,
-				E48D8B6124FB825300997A03 /* SceneDelegate.swift */,
 				E48D8B6524FB825300997A03 /* Main.storyboard */,
 				E48D8B6824FB825500997A03 /* Assets.xcassets */,
 				E48D8B6A24FB825500997A03 /* LaunchScreen.storyboard */,
@@ -412,9 +411,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E48D8B6024FB825300997A03 /* AppDelegate.swift in Sources */,
-				E48D8B6224FB825300997A03 /* SceneDelegate.swift in Sources */,
 				E4B45EFB24FBB0070028061E /* MovieCell.swift in Sources */,
 				E48D8B9024FB853600997A03 /* MoviesViewController.swift in Sources */,
+				E4A7A79D24FC047A00C40E76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +588,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UNJAR4XSYJ;
 				INFOPLIST_FILE = flixster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,7 +608,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UNJAR4XSYJ;
 				INFOPLIST_FILE = flixster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
