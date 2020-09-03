@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VF0-ob-HDK">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,6 +64,7 @@
                                             <outlet property="posterView" destination="2rj-5g-DLt" id="76p-b1-o63"/>
                                             <outlet property="synopsisLabel" destination="Oj2-8B-E4Q" id="5tU-kB-kZU"/>
                                             <outlet property="titleLabel" destination="cnZ-Ji-tfV" id="sgf-rB-PB4"/>
+                                            <segue destination="wNq-qX-W4R" kind="show" id="mMK-ct-p0Z"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -85,6 +87,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="138.58695652173915"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="Xsu-7O-Tej">
+            <objects>
+                <viewController id="wNq-qX-W4R" customClass="MovieDetailsViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FeF-GQ-nGF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yvz-aD-zd3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="GrP-Rb-CKL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n0h-s4-knk">
+                                <rect key="frame" x="20" y="201" width="100" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Yh2-dW-gix"/>
+                                    <constraint firstAttribute="width" constant="100" id="xx7-Io-dI7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcc-FQ-NYr">
+                                <rect key="frame" x="20" y="349" width="374" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBG-RM-vlA">
+                                <rect key="frame" x="128" y="288" width="266" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yvz-aD-zd3" firstAttribute="top" secondItem="FeF-GQ-nGF" secondAttribute="top" id="5mQ-Zt-4km"/>
+                            <constraint firstItem="ZDV-9K-jET" firstAttribute="trailing" secondItem="pcc-FQ-NYr" secondAttribute="trailing" constant="20" id="6Kr-Je-AtX"/>
+                            <constraint firstItem="IBG-RM-vlA" firstAttribute="leading" secondItem="n0h-s4-knk" secondAttribute="trailing" constant="8" id="EQZ-Pe-BlV"/>
+                            <constraint firstItem="pcc-FQ-NYr" firstAttribute="top" secondItem="n0h-s4-knk" secondAttribute="bottom" constant="8" id="EVv-Pc-t2h"/>
+                            <constraint firstItem="Yvz-aD-zd3" firstAttribute="leading" secondItem="ZDV-9K-jET" secondAttribute="leading" id="K9V-eL-gD6"/>
+                            <constraint firstItem="ZDV-9K-jET" firstAttribute="trailing" secondItem="IBG-RM-vlA" secondAttribute="trailing" constant="20" id="NJ2-J3-wee"/>
+                            <constraint firstItem="n0h-s4-knk" firstAttribute="top" secondItem="ZDV-9K-jET" secondAttribute="top" constant="157" id="XbQ-Es-eBF"/>
+                            <constraint firstItem="pcc-FQ-NYr" firstAttribute="leading" secondItem="ZDV-9K-jET" secondAttribute="leading" constant="20" id="eeP-G8-UIK"/>
+                            <constraint firstItem="Yvz-aD-zd3" firstAttribute="trailing" secondItem="ZDV-9K-jET" secondAttribute="trailing" id="jaH-zs-avN"/>
+                            <constraint firstItem="n0h-s4-knk" firstAttribute="leading" secondItem="ZDV-9K-jET" secondAttribute="leading" constant="20" id="qFR-5r-Sjs"/>
+                            <constraint firstItem="IBG-RM-vlA" firstAttribute="top" secondItem="Yvz-aD-zd3" secondAttribute="bottom" constant="8" id="sjP-y2-yyB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZDV-9K-jET"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pb2-mJ-Moz"/>
+                    <connections>
+                        <outlet property="backdropView" destination="Yvz-aD-zd3" id="ekN-a4-Sn6"/>
+                        <outlet property="posterView" destination="n0h-s4-knk" id="eiB-ii-P84"/>
+                        <outlet property="synopsisLabel" destination="pcc-FQ-NYr" id="kak-PH-NZD"/>
+                        <outlet property="titleLabel" destination="IBG-RM-vlA" id="pd0-9W-CBx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7q-h0-4JV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900.0000000000002" y="138.58695652173915"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="apx-Aj-ygl">
