@@ -154,7 +154,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7q-h0-4JV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="z3F-SK-9LS">
                     <connections>
-                        <segue destination="Llx-q1-rOS" kind="show" id="ttf-0E-3IV"/>
+                        <segue destination="Llx-q1-rOS" kind="presentation" id="ejV-YG-L2X"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -165,11 +165,11 @@
             <objects>
                 <viewController id="Llx-q1-rOS" customClass="TrailerViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QhR-ay-7dh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISA-vv-a4p">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -179,10 +179,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ISA-vv-a4p" firstAttribute="bottom" secondItem="5eO-J0-ZvL" secondAttribute="bottom" id="3VT-MN-jHP"/>
-                            <constraint firstItem="ISA-vv-a4p" firstAttribute="trailing" secondItem="5eO-J0-ZvL" secondAttribute="trailing" id="65B-2q-mZj"/>
-                            <constraint firstItem="ISA-vv-a4p" firstAttribute="leading" secondItem="5eO-J0-ZvL" secondAttribute="leading" id="9j8-ag-Vjo"/>
-                            <constraint firstItem="ISA-vv-a4p" firstAttribute="top" secondItem="5eO-J0-ZvL" secondAttribute="top" constant="-44" id="NIr-k5-2cA"/>
+                            <constraint firstItem="ISA-vv-a4p" firstAttribute="top" secondItem="5eO-J0-ZvL" secondAttribute="top" id="LN1-bV-J2C"/>
+                            <constraint firstItem="ISA-vv-a4p" firstAttribute="leading" secondItem="5eO-J0-ZvL" secondAttribute="leading" id="MK8-HQ-Fcp"/>
+                            <constraint firstItem="ISA-vv-a4p" firstAttribute="trailing" secondItem="5eO-J0-ZvL" secondAttribute="trailing" id="NHp-I2-cXk"/>
+                            <constraint firstItem="ISA-vv-a4p" firstAttribute="bottom" secondItem="5eO-J0-ZvL" secondAttribute="bottom" id="S9o-8z-1Qw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5eO-J0-ZvL"/>
                     </view>
