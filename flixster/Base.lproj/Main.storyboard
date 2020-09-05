@@ -103,12 +103,16 @@
                                     <constraint firstAttribute="height" constant="280" id="GrP-Rb-CKL"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n0h-s4-knk">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n0h-s4-knk">
                                 <rect key="frame" x="20" y="201" width="100" height="140"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="Yh2-dW-gix"/>
                                     <constraint firstAttribute="width" constant="100" id="xx7-Io-dI7"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="z3F-SK-9LS" appends="YES" id="lLe-AO-Onv"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcc-FQ-NYr">
                                 <rect key="frame" x="20" y="349" width="374" height="19.333333333333314"/>
@@ -148,8 +152,48 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7q-h0-4JV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z3F-SK-9LS">
+                    <connections>
+                        <segue destination="Llx-q1-rOS" kind="show" id="ttf-0E-3IV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1107" y="1957"/>
+            <point key="canvasLocation" x="-610" y="2105"/>
+        </scene>
+        <!--Trailer-->
+        <scene sceneID="tVB-0K-eKJ">
+            <objects>
+                <viewController id="Llx-q1-rOS" customClass="TrailerViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QhR-ay-7dh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISA-vv-a4p">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ISA-vv-a4p" firstAttribute="bottom" secondItem="5eO-J0-ZvL" secondAttribute="bottom" id="3VT-MN-jHP"/>
+                            <constraint firstItem="ISA-vv-a4p" firstAttribute="trailing" secondItem="5eO-J0-ZvL" secondAttribute="trailing" id="65B-2q-mZj"/>
+                            <constraint firstItem="ISA-vv-a4p" firstAttribute="leading" secondItem="5eO-J0-ZvL" secondAttribute="leading" id="9j8-ag-Vjo"/>
+                            <constraint firstItem="ISA-vv-a4p" firstAttribute="top" secondItem="5eO-J0-ZvL" secondAttribute="top" constant="-44" id="NIr-k5-2cA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5eO-J0-ZvL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trailer" id="fw0-py-Ngd"/>
+                    <connections>
+                        <outlet property="webView" destination="ISA-vv-a4p" id="HNU-tF-Rsm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ta-Ee-gfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610.14492753623188" y="2834.5108695652175"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="M1i-t4-D9E">
@@ -266,7 +310,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mMK-ct-p0Z"/>
+        <segue reference="ngi-Ef-RUs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
